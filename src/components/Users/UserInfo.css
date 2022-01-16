@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.userInfo {
+    font-family: cursive;
+    width: 100%;
+    /* border: 1px solid; */
+    display: flex;
+    color: rgb(88, 255, 247);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.userTitle {
+    margin-left: 20px;
+    font-family: cursive;
+}
