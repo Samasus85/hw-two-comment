@@ -4,31 +4,34 @@ import './Input.css';
 
 const Input = () => {
 
-    const [userName, setUserName] = useState();
+    const [user, setUserName] = useState();
     const [mail, setMail] = useState();
     const [phone, setPhone] = useState();
 
-    const userNameHandler = (e) => {
-        setUserName(e.target.value)
-    }
-    const mailailHandler = (e) => {
-        setMail(e.target.value)
-    }
-    const phoneHandler = (e) => {
-        setPhone(e.target.value)
+    const inputChangeHandler = (e) => {
+        const currentInput = e.target.name;
+        if (currentInput === 'user') {
+            setUserName(e.target.value)
+        } else if (currentInput === 'mail') {
+            setMail(e.target.value)
+        } else if (currentInput === 'phone') {
+            setPhone(e.target.value)
+        }
     }
 
     const buttonHandler = (e) => {
         e.preventDefault()
-        console.log(userName, mail, phone)
+        console.log(user)
+        console.log(mail)
+        console.log(phone)
     }
     return <form className='Form' onSubmit={buttonHandler}>
         <label>User</label>
-        <input name='user' type='text' onChange={userNameHandler} />
+        <input name='user' type='text' onChange={inputChangeHandler} />
         <label>email</label>
-        <input name='mail' type='email' onChange={mailailHandler} />
+        <input name='mail' type='email' onChange={inputChangeHandler} />
         <label>telephone</label>
-        <input name='phone' type='tel' onChange={phoneHandler} />
+        <input name='phone' type='tel' onChange={inputChangeHandler} />
         <button type='submit' >add</button>
     </form>
 }
