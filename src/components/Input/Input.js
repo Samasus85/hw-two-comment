@@ -35,9 +35,7 @@ const Input = () => {
     const buttonHandler = (e) => {
         e.preventDefault()
         console.log(userForm)
-        // console.log(user)
-        // console.log(mail)
-        // console.log(phone)
+        
     }
     return <form className='Form' onSubmit={buttonHandler}>
         <label>User</label>
