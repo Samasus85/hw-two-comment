@@ -1,4 +1,4 @@
-import './App.css';
+
 import Input from './components/Input/Input';
 import Card from './ui/Cards/Card';
 
