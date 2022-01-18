@@ -1,0 +1,22 @@
+.Form input {
+    width: 170px;
+    height: 30px;
+    background-color: rgb(247, 171, 247);
+    border-radius: 30px;
+    border: none;
+    margin: 20px;
+    color: blueviolet;
+}
+.Form button {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 50px;
+    background-color: rgb(81, 81, 245);
+    color: rgb(234, 244, 248);
+}
+
+.Form label {
+    margin-left: 30px;
+}
