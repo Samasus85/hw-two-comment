@@ -2,10 +2,10 @@ import Input from '../../components/Input/Input';
 import './Card.css';
 
 const Card = () => {
-    return <form className='Card'>
+    return <div className='Card'>
         <Input />
 
-    </form>
+    </div>
 }
 
 export default Card;
