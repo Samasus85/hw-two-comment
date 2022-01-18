@@ -9,43 +9,29 @@ const Input = () => {
         phone: ''
     })
 
-    const userChangeHandler = (e) => {
+    const formChangeHandler = (e) => {
+        const currentInput = e.target.name
         setUserForm({
             ...userForm,
-            user: e.target.value,
+            [currentInput]: e.target.value,
         });
     };
 
-    const mailChangeHandler = (e) => {
-        setUserForm({
-            ...userForm,
-            emal: e.target.value,
-        });
-    };
-
-    const phoneChangeHandler = (e) => {
-        setUserForm({
-            ...userForm,
-            phone: e.target.value,
-        });
-    };
 
 
 
     const buttonHandler = (e) => {
         e.preventDefault()
         console.log(userForm)
-        // console.log(user)
-        // console.log(mail)
-        // console.log(phone)
+
     }
     return <form className='Form' onSubmit={buttonHandler}>
         <label>User</label>
-        <input name='user' type='text' onChange={userChangeHandler} />
+        <input name='user' type='text' onChange={formChangeHandler} />
         <label>email</label>
-        <input name='mail' type='email' onChange={mailChangeHandler} />
+        <input name='mail' type='email' onChange={formChangeHandler} />
         <label>telephone</label>
-        <input name='phone' type='tel' onChange={phoneChangeHandler} />
+        <input name='phone' type='tel' onChange={formChangeHandler} />
         <button type='submit' >add</button>
     </form>
 }
