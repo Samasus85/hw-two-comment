@@ -11,7 +11,7 @@ const Input = () => {
     const userNameHandler = (e) => {
         setUserName(e.target.value)
     }
-    const mailailHandler = (e) => {
+    const mailHandler = (e) => {
         setMail(e.target.value)
     }
     const phoneHandler = (e) => {
@@ -26,7 +26,7 @@ const Input = () => {
         <label>User</label>
         <input name='user' type='text' onChange={userNameHandler} />
         <label>email</label>
-        <input name='mail' type='email' onChange={mailailHandler} />
+        <input name='mail' type='email' onChange={mailHandler} />
         <label>telephone</label>
         <input name='phone' type='tel' onChange={phoneHandler} />
         <button type='submit' >add</button>
