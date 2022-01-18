@@ -9,15 +9,37 @@ const Input = () => {
         phone: ''
     })
 
-    const formChangeHandler = (e) => {
-        const currentInput = e.target.name
-        setUserForm({
-            ...userForm,
-            [currentInput]: e.target.value,
+    const userChangeHandler = (e) => {
+        setUserForm((prevState) => {
+            console.log(prevState)
+            return {
+                ...prevState,
+                user: e.target.value,
+            }
         });
+
     };
 
+    const mailChangeHandler = (e) => {
+        setUserForm((prevState) => {
+            console.log(prevState)
+            return {
+                ...prevState,
+                email: e.target.value,
+            }
+        });
 
+    };
+    const phoneChangeHandler = (e) => {
+        setUserForm((prevState) => {
+            console.log(prevState)
+            return {
+                ...prevState,
+                phone: e.target.value,
+            }
+        });
+
+    };
 
 
     const buttonHandler = (e) => {
@@ -27,11 +49,11 @@ const Input = () => {
     }
     return <form className='Form' onSubmit={buttonHandler}>
         <label>User</label>
-        <input name='user' type='text' onChange={formChangeHandler} />
+        <input name='user' type='text' onChange={userChangeHandler} />
         <label>email</label>
-        <input name='mail' type='email' onChange={formChangeHandler} />
+        <input name='mail' type='email' onChange={mailChangeHandler} />
         <label>telephone</label>
-        <input name='phone' type='tel' onChange={formChangeHandler} />
+        <input name='phone' type='tel' onChange={phoneChangeHandler} />
         <button type='submit' >add</button>
     </form>
 }
